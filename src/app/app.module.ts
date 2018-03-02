@@ -1,3 +1,5 @@
+import { HttpModule } from '@angular/http';
+import { Http } from '@angular/http';
 import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
@@ -25,7 +27,8 @@ export const firebaseConfig = {
     BrowserModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    HttpModule,
   ],
   providers: [MessagingService, AngularFireDatabase, AngularFireAuth],
   bootstrap: [AppComponent]

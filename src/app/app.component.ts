@@ -8,14 +8,14 @@ import { MessagingService } from "./messaging.service";
 })
 export class AppComponent implements OnInit {
 
-  message;
+  message ;
 
   constructor(private msgService: MessagingService) {}
 
   ngOnInit() {
     this.msgService.getPermission()
     this.msgService.receiveMessage()
-    this.message = this.msgService.currentMessage
+    this.message = this.msgService.currentMessage;
   }
 
 }
